@@ -1,3 +1,11 @@
 var guesses = 0;
-var randomNum = Math.random();
+var min = 19;
+var max = 120;
+var randomNum = Math.random() * (+max - +min) + +min;
 var crystal;
+var userScore = 0;
+var points = 0;
+var blueCrystal = document.getElementById("blueCrystal");
+var redCrystal = document.getElementById("redCrystal");
+var greenCrystal = document.getElementById("greenCrystal");
+var purpleCrystal = document.getElementById("purpleCrystal");

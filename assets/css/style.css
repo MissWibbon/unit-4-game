@@ -23,7 +23,6 @@ h1 {
     float: left;
 }
 .scoring {
-    display: inline-block;
     float: left;
     height: 180px;
     background-color: blue;
