@@ -1,0 +1,16 @@
+h1 {
+    background-color: orange;
+    padding: 10px;
+    margin: 10px;
+}
+.description {
+    width: 50%;
+    margin: 10px;
+    background-color: grey;
+    padding: 10px;
+    color: white;
+}
+.crystal {
+    width: 20%;
+    display: inline-block;
+}
