@@ -17,6 +17,7 @@ var purpleVal = Math.round(randomVal3);
 var greenVal = Math.round(randomVal4);
 
 var userScore = 0;
+var userLosses = 0;
 var points = 0;
 var blueCrystal = document.getElementById("blueCrystal").onclick = function (){
     points = points + blueVal;
@@ -42,3 +43,16 @@ var purpleCrystal = document.getElementById("purpleCrystal").onclick = function 
     document.getElementById("score").innerHTML = points;
 
 };    
+
+    if(points === ranNumRound) {
+        document.getElementById("result").innerHTML = "You won";
+        userScore = ++userScore;
+        document.getElementById("wins").innerHTML = userScore;
+        console.log("You win");
+    }
+    else if(points > ranNumRound) {
+        document.getElementById("result").innerHTML = "You lose";
+        userLosses = ++userLosses;
+        document.getElementById("losses").innerHTML = userLosses;
+        console.log("You lose");
+    }
