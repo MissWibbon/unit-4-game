@@ -23,84 +23,54 @@ var blueCrystal = document.getElementById("blueCrystal").onclick = function (){
     points = points + blueVal;
     console.log(points);
     document.getElementById("score").innerHTML = points;
-    if(points === ranNumRound) {
-            
-        document.getElementById("result").innerHTML = "You won";
-        userScore = userScore++;
-        console.log("You win");
-        var wins = document.getElementById("wins").innerHTML = userScore++;
+    winLose();
 
-    }
-    else if(points > ranNumRound) {
-        document.getElementById("result").innerHTML = "You lose";
-        userLosses = userLosses++;
-        console.log("You lose");
-        var losses = document.getElementById("losses").innerHTML = userLosses++;
-
-    }
 };    
 var redCrystal = document.getElementById("redCrystal").onclick = function (){
     points = points + redVal;
     console.log(points);
     document.getElementById("score").innerHTML = points;
-    if(points === ranNumRound) {
-            
-        document.getElementById("result").innerHTML = "You won";
-        userScore = userScore++;
-        console.log("You win");
-        var wins = document.getElementById("wins").innerHTML = userScore++;
+    winLose();
 
-    }
-    else if(points > ranNumRound) {
-        document.getElementById("result").innerHTML = "You lose";
-        userLosses = userLosses++;
-        console.log("You lose");
-        var losses = document.getElementById("losses").innerHTML = userLosses++;
-
-    }
 };    
 var greenCrystal = document.getElementById("greenCrystal").onclick = function (){
     points = points + greenVal;
     console.log(points);
     document.getElementById("score").innerHTML = points;
-    if(points === ranNumRound) {
-            
-        document.getElementById("result").innerHTML = "You won";
-        userScore = userScore++;
-        console.log("You win");
-        var wins = document.getElementById("wins").innerHTML = userScore++;
+    winLose();
 
-    }
-    else if(points > ranNumRound) {
-        document.getElementById("result").innerHTML = "You lose";
-        userLosses = userLosses++;
-        console.log("You lose");
-        var losses = document.getElementById("losses").innerHTML = userLosses++;
-
-    }
 };    
 var purpleCrystal = document.getElementById("purpleCrystal").onclick = function (){
     points = points + purpleVal;
     console.log(points);
     document.getElementById("score").innerHTML = points;
+    winLose();
+    
+}; 
+function winLose(){
     if(points === ranNumRound) {
             
-            document.getElementById("result").innerHTML = "You won";
-            userScore = userScore++;
-            console.log("You win");
-            var wins = document.getElementById("wins").innerHTML = userScore++;
+        document.getElementById("result").innerHTML = "You won";
+        userScore++;
+        console.log("You win");
+        document.getElementById("wins").innerHTML = userScore;
+        reset();
 
-            
-        }
-        else if(points > ranNumRound) {
-            document.getElementById("result").innerHTML = "You lose";
-            userLosses = userLosses++;
-            console.log("You lose");
-            var losses = document.getElementById("losses").innerHTML = userLosses++;
-        }
-
-
-};    
+    }
+    else if(points > ranNumRound) {
+        document.getElementById("result").innerHTML = "You lose";
+        userLosses++;
+        console.log("You lose");
+        document.getElementById("losses").innerHTML = userLosses;
+        reset();
+    }
+}   
+function reset() {
+    randomNum = Math.random() * (+max - +min) + +min;;
+    ranNumRound = Math.round(randomNum);
+    document.getElementById("randomNumber").innerHTML = ranNumRound;
+    points = 0;
+}
 
     
 
