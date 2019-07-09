@@ -5,7 +5,6 @@ h1 {
     font-family: 'Oxygen', sans-serif;
 }
 .description {
-    width: 350px;
     margin: 10px;
     background-color: grey;
     padding: 10px;
@@ -22,12 +21,14 @@ h1 {
     background-color: green;
     padding: 10px;
     color: white;
-    height: 100px;
+    height: 90px;
     margin-left: 10px;
     float: left;
     font-family: 'Oxygen', sans-serif;
     font-weight: 500;
     font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
 }
 .scoring {
     float: left;
@@ -64,4 +65,14 @@ h1 {
     font-family: 'Oxygen', sans-serif;
     height: 25px;
 
+}
+#wins {
+    color: white;
+    display: inline-block;
+    margin-left: 5px;
+}
+#losses {
+    color: white;
+    display: inline-block;
+    margin-left: 5px;
 }

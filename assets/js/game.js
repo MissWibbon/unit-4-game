@@ -43,16 +43,20 @@ var purpleCrystal = document.getElementById("purpleCrystal").onclick = function 
     document.getElementById("score").innerHTML = points;
 
 };    
-
+function winLose(){
     if(points === ranNumRound) {
         document.getElementById("result").innerHTML = "You won";
-        userScore = ++userScore;
-        document.getElementById("wins").innerHTML = userScore;
+        userScore = userScore++;
         console.log("You win");
     }
     else if(points > ranNumRound) {
         document.getElementById("result").innerHTML = "You lose";
-        userLosses = ++userLosses;
-        document.getElementById("losses").innerHTML = userLosses;
+        userLosses = userLosses++;
         console.log("You lose");
     }
+}
+
+var wins = document.getElementById("wins").innerHTML = userScore;
+var losses = document.getElementById("losses").innerHTML = userLosses;
+
+
