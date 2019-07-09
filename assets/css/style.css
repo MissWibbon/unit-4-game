@@ -12,6 +12,9 @@ h1 {
     font-family: 'Oxygen', sans-serif;
 
 }
+.crystals {
+    max-width: 500px;
+}
 .crystal {
     width: 20%;
     display: inline-block;
